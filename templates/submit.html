@@ -6,14 +6,16 @@
     <title>Image Submission</title>
 </head>
 <body>
-    <h1>Result:</h1>
+    <h1>Image</h1>
+    <hr>
     {% if img_src %}
         <img src="{{ img_src }}">
     {% endif %}
 
-    <h1>Result:</h1>
+    <h1>Result</h1>
+    <hr>
     {% if extracted_text %}
-        <p>{{ extracted_text }}</p>
+        <p>The extracted text from the image above:<br><br><b>{{ extracted_text }}</b></p>
     
     {% else %}
         extracted text here

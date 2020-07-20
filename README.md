@@ -1,6 +1,7 @@
 # Requirements: 
 * Install Tesseract-ocr engine from there: https://github.com/UB-Mannheim/tesseract/wiki
 * Python 3 or above
+* Flask
 ### Libraries:
 * Pillow
 * pytesseract
