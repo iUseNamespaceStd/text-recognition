@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Submission</title>
+</head>
+<body>
+    <h1>Result:</h1>
+    {% if img_src %}
+        <img src="{{ img_src }}">
+    {% endif %}
+
+    <h1>Result:</h1>
+    {% if extracted_text %}
+        <p>{{ extracted_text }}</p>
+    
+    {% else %}
+        extracted text here
+    {% endif %}
+</body>
+</html>
