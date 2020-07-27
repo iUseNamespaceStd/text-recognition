@@ -10,7 +10,7 @@ Follow these steps:
 1. Inside the "app.py" file, make sure to "pip install" the required libraries. 
 1. The format used inside the "customer_template.docx" file should remain the same unless you plan on changing the regex used inside the "app.py" file to a custom one. I recommend that you check out the regex first to learn about the appropriate format before filling in the cutomer_template.
 1. To run the app, simply type "python app.py" inside the terminal.
-1. Make sure that the image is located inside the 'static' folder to avoid errors before uploading.
+1. Make sure that the image is located inside the 'static' folder before uploading. 
 1. From there, the application should be simple enough to use without the need for further explanation.
 
 
