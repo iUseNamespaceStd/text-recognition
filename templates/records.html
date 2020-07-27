@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1 class="header">Customer Records</h1>
+    <hr>
+    <div class="table-container">
+        <table border=2>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>ID number</th>
+                <th>Email address</th>
+                <th>Mobile phone number</th>
+                <th>Signature</th>
+            </tr>
+
+            {% for item in data %}
+                {% if data %}
+            <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+                <td>{{item[5]}}</td>
+                <td>
+                    <form method='POST' action="{{url_for('delete_record', id_number=item[2])}}">
+                        <input type="hidden" name="delete" value="DELETE">
+                        <input type="submit" id="delete-record" value="Delete">
+                    </form>
+                </td>
+            </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

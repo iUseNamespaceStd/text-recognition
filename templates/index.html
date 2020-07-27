@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <h1 class="header">Homepage</h1>
+        <hr>
+        <div class="form-wrapper">
+            <form action="/upload">
+            <input type="submit" id="upload" value="Upload Image">
+            </form>
+            <br><br>
+            <form action="/records">
+            <input type="submit" id="records" value="Customer records">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

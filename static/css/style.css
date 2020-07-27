@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #5bc0de;
+}
+
+hr{
+    border-color: black;
+    color: black;
+    background-color: black;
+}
+
+.header{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+form{
+    margin: 30px;
+}
+
+#upload{
+    display: flex;
+    text-align: center;
+    border: 1px solid darkblue;
+    padding: 10px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: darkblue;
+    color: white;
+}
+
+#records{
+    display: flex;
+    text-align: center;
+    border: 1px solid darkblue;
+    padding: 10px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: darkblue;
+    color: white;
+}
+
+.table-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+table{
+    text-align: center;
+    align-items: center;
+    width: 1200px;
+    border: 2px solid black;
+}
+
+th, td{
+    font-size: 20px;
+}
+
+
+#uploader{
+    text-align: center;
+}
+
+#choose-btn{
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+#upload-btn{
+    box-sizing: border-box;
+    padding: 3px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.submit-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.img-container{
+    display: flex;
+}
+
+.info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border: 2px solid black;
+    height: 350px;
+    width: 550px;
+}
+
+.text-container{
+    display: flex;
+    width: 450px;
+    /* border: 2px solid black; */
+    background-color: white;
+}
+
+.store_btn-container{
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-upload-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+    border: 1px solid darkblue;
+    padding: 10px;
+    cursor: pointer; 
+}
+
+#store-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+    border: 1px solid darkblue;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#image{
+    height: 350px;
+    width: 600px;
+}
+
+.nrecord-form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_record-container{
+    margin-top: 18%;
+}
+
+#another_upload-btn{
+    display: flex;
+    text-align: center;
+    border: 1px solid darkblue;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: darkblue;
+    color: white;
+}
+
+#view_records-btn{
+    display: flex;
+    text-align: center;
+    border: 1px solid darkblue;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: darkblue;
+    color: white;
+}
+
+#delete-record{
+    background-color: darkblue;
+    color: white;
+    border: 1px solid darkblue;
+    padding: 8px;
+    cursor: pointer;
+}

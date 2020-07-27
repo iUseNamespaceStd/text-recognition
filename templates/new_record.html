@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Customer Record</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="new_record-container">   
+        {% if customer_info %}
+        <h1 class="header">Added a new customer record!</h1>
+        {% else %}
+        <h1 id="header">Error, invalid customer information. Please try again!</h1>
+        {% endif %}
+        </div>
+        <div class="nrecord-form-wrapper">
+            <form action="/upload">
+                <input type="submit" id="another_upload-btn" value="Upload another image">
+            </form>
+            <form action="/records">
+                <input type="submit" id="view_records-btn"value="View customer records">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Submission</title>
+    <title>Image and text recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Image</h1>
+    <h1 class="header">Image uploaded</h1>
     <hr>
-    {% if img_src %}
-        <img src="{{ img_src }}">
-    {% endif %}
-
-    <h1>Result</h1>
-    <hr>
-    {% if extracted_text %}
-        <p>The extracted text from the image above:<br><br><b>{{ extracted_text }}</b></p>
-    
-    {% else %}
-        extracted text here
-    {% endif %}
+    <div class="submit-container">
+        <div class="img-container">
+        {% if img_src %}
+            <img id="image" src="{{ img_src }}">
+        {% endif %}
+        </div>
+        <div class="info-wrapper">
+            <h2>Extracted Text:</h3>
+            <br>
+            <div class="text-container">
+            {% if extracted_text %}    
+                <p><b>{{ extracted_text }}</b></p>
+            {% else %}
+                <p><b>Text extraction unsuccessful!</b></p>
+            {% endif %}
+            </div>
+            <div class="store_btn-container">
+                <form method="POST" action="/new_record">
+                    <input type="submit" id='store-btn' name='store' value="Store customer information">
+                </form>
+                <form action="/upload">
+                    <input type="submit" id='submit-upload-btn'value="Upload another image">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

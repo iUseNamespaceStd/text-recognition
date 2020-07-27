@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content identification</title>
+    <title>Image Uploader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <div class="upload-container">
+    <h1 class="header">Upload an image & extract text</h1>
+    <hr>
+    <div class="wrapper">
+        <form method="POST" action="/submit" id="uploader" enctype=multipart/form-data>
+            <input type="file" id="choose-btn" name="file">
+            <input type="submit" id="upload-btn" value="Upload">
+        </form>
+    </div>
+    </div>
+
     {% if msg %}
-    <h1>{{ msg }}</h1>
+    <h3>{{ msg }}</h3>
     {% endif %}
-
-    <h1>Please upload an image</h1>
-
-    <form method="POST" action="/submit" enctype=multipart/form-data>
-        <input type="file" name="file">
-        <input type="submit" value="Upload">
-    </form>
 </body>
 </html>

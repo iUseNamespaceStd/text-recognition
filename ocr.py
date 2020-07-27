@@ -12,4 +12,4 @@ def ocr(filename):
     text = pytesseract.image_to_string(Image.open(filename))
     return text
 
-print(ocr('static/test.png'))
+

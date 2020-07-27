@@ -1,18 +1,16 @@
 # Requirements: 
 * Install Tesseract-ocr engine from there: https://github.com/UB-Mannheim/tesseract/wiki
-* Python 3 or above
+* Python 3.5 or above(with pip installed)
 * Flask
-### Libraries:
-* Pillow
-* pytesseract
+* MySQL
 
 ## How to use?
-Once you have met all the requirements above, you can finally play around with the script!
 Follow these steps:
-1. Set the appropriate path where your tesseract.exe is located(path in script is the default path) 
-1. Find an image of your choice, put it inside the project folder and change its name+format inside the script 
-1. Run the script "python ocr.py"
-1. You will be prompted with the option to upload images
-1. First make sure that the image is located inside the 'static' folder to avoid errors
-1. Once you click on 'Upload', the text inside the imge will be extracted and you will be redirected to the results.
+1. Set the appropriate path for the location of Tesseract-OCR engine(tesseract.exe) inside the "ocr.py" script(path in script is the default path).
+1. Inside the "app.py" file, make sure to "pip install" the required libraries. 
+1. The format used inside the "customer_template.docx" file should remain the same unless you plan on changing the regex used inside the "app.py" file to a custom one. I recommend that you check out the regex first to learn about the appropriate format before filling in the cutomer_template.
+1. To run the app, simply type "python app.py" inside the terminal.
+1. Make sure that the image is located inside the 'static' folder to avoid errors before uploading.
+1. From there, the application should be simple enough to use without the need for further explanation.
+
 
