@@ -67,7 +67,7 @@ def new_record():
                         
                         pattern = re.compile('|'.join(pattern_list)) #combine the regex in pattern_list with '|' and compile it
                         matches = pattern.findall(customer_info) #find all the matches from extracted text of image
-                        myList = [match for match in matches] #matches found stored inside array
+                        myList = [match for match in matches] #matches found stored inside list
                      
                         for match in matches:
                                 print(match)
