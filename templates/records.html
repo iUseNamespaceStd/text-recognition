@@ -8,7 +8,14 @@
 </head>
 <body>
     <h1 class="header">Customer Records</h1>
-    <hr>
+    <hr><br>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p style="text-align: center;color:green;">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <div class="table-container">
         <table border=2>
             <tr>
@@ -40,5 +47,8 @@
             {% endfor %}
         </table>
     </div>
+    {% if msg %}
+    <h2 style="text-align:center; color:darkblue;">{{msg}}</h1>
+    {% endif %}
 </body>
 </html>

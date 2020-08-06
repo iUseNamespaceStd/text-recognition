@@ -1,6 +1,6 @@
 import os
 import re
-from flask import Flask, render_template, request, redirect, session, url_for
+from flask import Flask, render_template, request, redirect, session, url_for, flash
 from ocr import ocr
 import csv
 import MySQLdb
@@ -97,7 +97,7 @@ def records():
                 if entries > 0:
                         return render_template('records.html', data=data)
                 else:
-                        msg = "No customer records found"
+                        msg = "No customer records found!"
                         return render_template('records.html', msg=msg)  
                 cur.close()
 
@@ -106,8 +106,9 @@ def delete_record(id_number):
         if request.method == 'POST':
                 cur = db.cursor()
                 
-                cur.execute("DELETE FROM customers where id_number = %s", [id_number])
-
+                entries = cur.execute("DELETE FROM customers where id_number = %s", [id_number])
+                if entries > 0: 
+                        flash("Record deleted!")
                 db.commit()
                 cur.close()
                 return redirect(url_for('records'))
