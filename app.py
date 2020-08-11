@@ -69,8 +69,9 @@ def new_record():
                         matches = pattern.findall(customer_info) #find all the matches from extracted text of image
                         myList = [match for match in matches] #matches found stored inside list
                      
-                        for match in matches:
-                                print(match)
+                        #print each match inside matches to check if there are any unexpected errors
+                        for match in matches: 
+                                print(match) 
                         
                         #writes latest customer information inside csv file
                         with open("customer.csv", "w", newline='') as csv_file:
@@ -79,9 +80,9 @@ def new_record():
 
                         cur = db.cursor()
                         csv_data = csv.reader(open('customer.csv'))
-                        for row in csv_data:
-                                cur.execute('INSERT INTO customers (date, name, id_number, email, mobile_number, signature) VALUES(%s, %s, %s, %s, %s, %s)', row)
-                                print(row)
+                        for row in csv_data:    
+                                cur.execute('INSERT IGNORE INTO customers (date, name, id_number, email, mobile_number, signature) VALUES(%s, %s, %s, %s, %s, %s)', row)
+                                print("The following row has been added to the database: ", row)
                         
                         db.commit()
                         cur.close()
